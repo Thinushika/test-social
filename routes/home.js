@@ -16,6 +16,14 @@ router.post("/", async (req, res, next) => {
     });
 });
 router.get("/webhook", (req, res) => {
+
+    let mode = req.query["hub.mode"];
+  let token = req.query["hub.verify_token"];
+  let challenge = req.query["hub.challenge"];
+
+  console.log(mode, token,challenge)
+
+
     return res.status(200).json({
         title: "Express Testing post",
         message: "The app is working properly!",
