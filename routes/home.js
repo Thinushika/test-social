@@ -16,7 +16,7 @@ router.post("/", async (req, res, next) => {
     });
   });
 
-  app.post("/webhook", (req, res) => {
+  router.post("/webhook", (req, res) => {
     let body = req.body;
 
     console.log(`\u{1F7EA} Received webhook:`);
